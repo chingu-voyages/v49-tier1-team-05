@@ -36,7 +36,7 @@ coding!
 
 - Secelia: [GitHub](https://github.com/Secelia02) / [LinkedIn](https://linkedin.com/in/seceliamcnair)
 - Radhika: [goldilocks0164](https://github.com/goldilocks0164) / [LinkedIn](https://www.linkedin.com/in/radhika-godla-81335166)
-
+- Jayanti [Github](https://github.com/jayanti-neu) / [LinkedIn](https://www.linkedin.com/in/jayanti-hari-22b25991/)
   ...
 
 - Teammate name #n: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)

@@ -1,0 +1,15 @@
+body p {
+    color: red;
+}
+
+div.test {
+    color: purple;
+}
+
+span.test {
+    color: orange;
+}
+
+h1 {
+    color: green;
+}

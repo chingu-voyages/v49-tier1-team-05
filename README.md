@@ -34,10 +34,12 @@ Everyone on your team should add their name along with a link to their GitHub
 your repo access and to practice PR'ing with your team _before_ you start
 coding!
 
+
 - Secelia: [GitHub](https://github.com/Secelia02) / [LinkedIn](https://linkedin.com/in/seceliamcnair)
 - Radhika: [goldilocks0164](https://github.com/goldilocks0164) / [LinkedIn](https://www.linkedin.com/in/radhika-godla-81335166)
 - David: [GitHub](https://github.com/david-nyc-pm)
-
-  ...
-
+- Mike Brindley: [GitHub](https://github.com/Mikelovin23) / [LinkedIn](https://www.linkedin.com/in/brindley/)
+- Secelia: [GitHub](https://github.com/Secelia02) / [LinkedIn](https://linkedin.com/in/seceliamcnair)
+- Radhika: [goldilocks0164](https://github.com/goldilocks0164) / [LinkedIn](https://www.linkedin.com/in/radhika-godla-81335166)
+...
 - Teammate name #n: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)

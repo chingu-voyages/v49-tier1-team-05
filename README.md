@@ -35,6 +35,7 @@ your repo access and to practice PR'ing with your team _before_ you start
 coding!
 
 
+- Jody: [GitHub](https://github.com/JoDepp) / [LinkedIn](https://www.linkedin.com/in/jody-depp-develops/)
 - Secelia: [GitHub](https://github.com/Secelia02) / [LinkedIn](https://linkedin.com/in/seceliamcnair)
 - Radhika: [goldilocks0164](https://github.com/goldilocks0164) / [LinkedIn](https://www.linkedin.com/in/radhika-godla-81335166)
 - David: [GitHub](https://github.com/david-nyc-pm)

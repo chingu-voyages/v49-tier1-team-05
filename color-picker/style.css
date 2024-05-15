@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  border: 1px solid black;
+}
+
+.header {
+  display: flex;
+  padding: 10px;
+  border: 2px solid red;
+  justify-content: space-between;
+}
+
+.logo {
+  padding: 10px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.aboutUs {
+  padding: 10px;
+  background-color: blueviolet;
+  border: 2px solid black;
+}

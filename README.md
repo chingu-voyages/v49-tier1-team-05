@@ -35,6 +35,7 @@ your repo access and to practice PR'ing with your team *before* you start
 coding!
 
 - JODY DEPP: [GitHub](https://github.com/JoDepp) / [LinkedIn](https://www.linkedin.com/in/jody-depp-develops/)
+- new name: [test](#) / [link](#)
 
    ...
 - Teammate name #n: [GitHub](https://github.com/ghaccountname) / [LinkedIn](https://linkedin.com/in/liaccountname)

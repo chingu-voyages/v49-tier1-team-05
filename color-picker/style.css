@@ -24,3 +24,30 @@
   background-color: blueviolet;
   border: 2px solid black;
 }
+
+#container {
+  height: 100vh;
+  border: 2px solid rgb(44, 188, 24);
+  display: flex;
+}
+
+#container section {
+  border: 2px solid yellow;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#container .color-wheel {
+  margin: 10px;
+  border-radius: 50%;
+  width: 50%;
+  height: 50%;
+  padding: 10px;
+  border: 5px solid black;
+}
+
+.footer {
+  border: 2px solid black;
+}

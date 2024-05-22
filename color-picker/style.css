@@ -7,20 +7,20 @@
   border: 1px solid black;
 }
 
+body {
+  margin: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 .header {
   display: flex;
-  padding: 10px;
-  border: 2px solid red;
+  padding: 20px 10px;
   justify-content: space-between;
 }
 
-.logo {
+.title {
   padding: 10px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: right;
 }
 
-.aboutUs {
-  padding: 10px;
-  background-color: blueviolet;
-  border: 2px solid black;
-}
+

@@ -9,7 +9,7 @@
 
 body {
   margin: 0;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .header {
@@ -54,4 +54,9 @@ body {
 
 .footer {
   border: 2px solid black;
+}
+
+.pickedColor {
+  border: 2px solid black;
+  padding: 10px;
 }

@@ -18,9 +18,9 @@ colorWheel.addEventListener("click", (event) => {
   const x = event.clientX - centerX;
   const y = event.clientY - centerY;
 
-  console.log(x, y);
-
   const angle = Math.atan2(y, x) * (180 / Math.PI);
-  const hue = angle / 360; // Adjust this mapping to your needs
-  console.log(`User selected hue: ${hue * 360}`);
+  const hue = angle + 90;
+
+  const colorInputDiv = document.getElementById("pickerColorDiv");
+  colorInputDiv.style.backgroundColor = `hsl(${hue}, 100%, 50%)`;
 });

@@ -10,18 +10,36 @@
   </head>
   <body>
     <div id="app">
+      <!-- Header and Nav -->
       <header class="header">
         <img src="img/color_logo.png" class="logo" alt="image of color wheel">
         <div class="title"><h1>COLOR HARMONIZE</h1><br><h2>Takes you on a journey to perfect color pairing</h2></div>
       </header>
+
       <main id="container">
-        <section class="content">
-          Welcome, Here you'll find a color palette for your space
-        </section>
+
+        <!-- Color Palette Section -->
+        <section class="color-palette">
+          <h3>Color Palette Generator</h3>
+ 
+          <div class="palette">
+            <div class="color" id="color-1" style="background-color: #ff5733;"></div>
+            <div class="color" id="color-2" style="background-color: #ffdc33;"></div>
+            <div class="color" id="color-3" style="background-color: #33ff5d;"></div>
+            <div class="color" id="color-4" style="background-color: #3360ff;"></div>
+            <div class="color" id="color-5" style="background-color: #a033ff;"></div>
+          </div>
+        </section>  
+        <script src="script.js"></script>
+
+        <!-- End of Color Palette Section -->
+
         <section class="color-picker">
           <div class="color-wheel" id="colorWheel"></div>
         </section>
       </main>
+      <!-- End of Main Section -->
+
       <footer class="footer">
         <p>
           Author: Chingu Team 5 Tier 1 <br />

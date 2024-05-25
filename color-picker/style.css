@@ -54,6 +54,21 @@ body {
 
 .footer {
   border: 2px solid black;
+  align-items: center;
+  text-align: center;
+  padding:1rem;
+}
+
+.legal-terms{
+  font-size:medium;
+  font-weight: 100;
+  padding: 0.35rem;
+}
+.icons{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  column-gap: 0.5rem;
 }
 
 .pickedColor {

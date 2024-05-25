@@ -56,15 +56,15 @@ body {
   border: 2px solid black;
   align-items: center;
   text-align: center;
-  padding:1rem;
+  padding: 1rem;
 }
 
-.legal-terms{
-  font-size:medium;
+.legal-terms {
+  font-size: medium;
   font-weight: 100;
   padding: 0.35rem;
 }
-.icons{
+.icons {
   display: flex;
   align-content: center;
   justify-content: center;
@@ -80,7 +80,6 @@ body {
   border: 2px solid black;
   margin: 10px;
   height: 35px;
-  /* width: 500px; */
   border-radius: 10px;
   position: relative;
 }
@@ -93,11 +92,12 @@ body {
 
 .slider {
   z-index: 2;
-  width: 5px;
+  width: 10px;
   height: 35px;
   border: 2px solid red;
   border-radius: 10px;
 
   position: relative;
   top: -2px;
+  left: -1px;
 }

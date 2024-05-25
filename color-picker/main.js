@@ -1,11 +1,10 @@
 let colorWheel = document.getElementById("colorWheel");
 const rect = colorWheel.getBoundingClientRect();
-
-console.log(rect.width);
 let saturationBar = document.querySelector(".saturation");
-saturationBar.style.width = `${rect.width}px`;
-
 let lighteningBar = document.querySelector(".lightening");
+let slider = document.querySelector(".slider");
+
+saturationBar.style.width = `${rect.width}px`;
 lighteningBar.style.width = `${rect.width}px`;
 
 // const hslColor = {
@@ -46,4 +45,20 @@ colorWheel.addEventListener("click", (event) => {
 
   lighteningBar.style.backgroundColor = currentColor;
   lighteningBar.style.backgroundImage = `linear-gradient(90deg, )`;
+});
+
+slider.addEventListener("mouseover", () => {
+  console.log("mouse over ");
+});
+
+slider.addEventListener("mousedown", () => {
+  console.log("mouse down boys and girls");
+});
+
+slider.addEventListener("mouseleave", () => {
+  console.log("mouse leave");
+});
+
+slider.addEventListener("mouseup", () => {
+  console.log("mouse up");
 });

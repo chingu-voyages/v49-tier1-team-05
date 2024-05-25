@@ -9,7 +9,7 @@
 
 body {
   margin: 0;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .header {
@@ -69,4 +69,35 @@ body {
   align-content: center;
   justify-content: center;
   column-gap: 0.5rem;
+}
+
+.pickedColor {
+  border: 2px solid black;
+  padding: 10px;
+}
+
+.saturation {
+  border: 2px solid black;
+  margin: 10px;
+  height: 35px;
+  /* width: 500px; */
+  border-radius: 10px;
+  position: relative;
+}
+
+.lightening {
+  border: 2px solid black;
+  height: 35px;
+  border-radius: 10px;
+}
+
+.slider {
+  z-index: 2;
+  width: 5px;
+  height: 35px;
+  border: 2px solid red;
+  border-radius: 10px;
+
+  position: relative;
+  top: -2px;
 }

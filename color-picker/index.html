@@ -10,12 +10,17 @@
     <link />
     <link rel="icon" type="image/x-icon" href="img/favicon-32x32.png" alt="img with the word color"/>
     <link rel="stylesheet" href="./style.css"/>
+
   </head>
   <body>
     <div id="app">
       <header class="header">
-        <img src="img/color_logo.png" class="logo" alt="image of color wheel">
-        <div class="title"><h1>COLOR HARMONIZE</h1><br><h2>Takes you on a journey to perfect color pairing</h2></div>
+        <img src="img/color_logo.png" class="logo" alt="image of color wheel" />
+        <div class="title">
+          <h1>COLOR HARMONIZE</h1>
+          <br />
+          <h2>Takes you on a journey to perfect color pairing</h2>
+        </div>
       </header>
       <main id="container">
         <section class="content">
@@ -23,6 +28,14 @@
         </section>
         <section class="color-picker">
           <div class="color-wheel" id="colorWheel"></div>
+          <p>picked color:</p>
+          <div class="pickedColor" id="pickerColorDiv"></div>
+          <p>saturation:</p>
+          <div class="saturation">
+            <div class="slider"></div>
+          </div>
+          <p>lightening</p>
+          <div class="lightening"></div>
         </section>
       </main>
       <footer class="footer">

@@ -1,12 +1,28 @@
 let colorWheel = document.getElementById("colorWheel");
 const rect = colorWheel.getBoundingClientRect();
-let saturationBar = document.querySelector(".saturation");
-let lighteningBar = document.querySelector(".lightening");
-let slider = document.querySelector(".slider");
 
+let saturationBar = document.querySelector(".saturation");
+
+let lighteningBar = document.querySelector(".lightening");
+
+let slider = document.querySelector(".slider");
+const sliderBounds = slider.getBoundingClientRect();
 saturationBar.style.width = `${rect.width}px`;
 lighteningBar.style.width = `${rect.width}px`;
+let sbounds = saturationBar.getBoundingClientRect();
+let lbounds = lighteningBar.getBoundingClientRect();
+let unitOfColor = (sbounds.width - sliderBounds.width) / 100;
 
+// slider.style.width = `${unitOfColor}px`;
+
+console.log("sbounds");
+console.log(sbounds);
+
+console.log("lbounds");
+console.log(lbounds);
+
+// console.log("sliderbounds");
+// console.log(sliderBounds);
 // const hslColor = {
 //   hue: 120,
 //   saturation: 100,
@@ -36,6 +52,9 @@ colorWheel.addEventListener("click", (event) => {
 
   const currentColor = `hsl(${hue}, 100%, 50%)`;
   const currentColor0Sat = `hsl(${hue}, 0%, 50%)`;
+  const currentColor0Ligt = `hsl(${hue}, 50%, 0%)`;
+  console.log(hue);
+  const currentColor100Ligt = `hsl(${hue}, 50%, 100%)`;
 
   const colorInputDiv = document.getElementById("pickerColorDiv");
   colorInputDiv.style.backgroundColor = currentColor;
@@ -44,21 +63,35 @@ colorWheel.addEventListener("click", (event) => {
   saturationBar.style.backgroundImage = `linear-gradient(90deg, ${currentColor0Sat}, ${currentColor})`;
 
   lighteningBar.style.backgroundColor = currentColor;
-  lighteningBar.style.backgroundImage = `linear-gradient(90deg, )`;
+  lighteningBar.style.backgroundImage = `linear-gradient(90deg, ${currentColor0Ligt}, ${currentColor100Ligt})`;
 });
 
-slider.addEventListener("mouseover", () => {
-  console.log("mouse over ");
-});
+let mouseDown = 0;
 
 slider.addEventListener("mousedown", () => {
-  console.log("mouse down boys and girls");
+  mouseDown = 1;
 });
 
-slider.addEventListener("mouseleave", () => {
-  console.log("mouse leave");
-});
-
-slider.addEventListener("mouseup", () => {
+window.addEventListener("mouseup", () => {
   console.log("mouse up");
+  mouseDown = 0;
+});
+
+window.addEventListener("mousemove", (event) => {
+  if (mouseDown == 1) {
+    let sliderBounds = slider.getBoundingClientRect();
+    if (event.x < sbounds.x + sliderBounds.width / 2) {
+      slider.style.left = `-1px`;
+    } else if (
+      event.x > sbounds.x &&
+      event.x < sbounds.x + sbounds.width - sliderBounds.width / 2
+    ) {
+      let currentLocation = event.x - sbounds.x - sliderBounds.width / 2;
+      // console.log(currentLocation);
+      let saturation = Math.floor(currentLocation / unitOfColor);
+      pick;
+      console.log(currentLocation / unitOfColor);
+      slider.style.left = `${currentLocation}px`;
+    }
+  }
 });

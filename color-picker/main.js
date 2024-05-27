@@ -89,7 +89,6 @@ window.addEventListener("mousemove", (event) => {
       let currentLocation = event.x - sbounds.x - sliderBounds.width / 2;
       // console.log(currentLocation);
       let saturation = Math.floor(currentLocation / unitOfColor);
-      pick;
       console.log(currentLocation / unitOfColor);
       slider.style.left = `${currentLocation}px`;
     }

@@ -12,6 +12,7 @@ body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
+/*Start of header*/
 .header {
   display: flex;
   padding: 20px 10px;
@@ -22,6 +23,32 @@ body {
   padding: 10px;
   text-align: right;
 }
+
+/* End of header */
+
+/* Start of Color Palette */
+.color-palette h3 {
+  padding: 10px;
+  text-align: center;
+}
+
+.palette {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  max-width: 600px;
+  padding-top: 50px;
+}
+
+.color {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #fff;
+}
+
+
+/* End of Color Palette Container */
 
 .aboutUs {
   padding: 10px;

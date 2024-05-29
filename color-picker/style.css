@@ -12,6 +12,7 @@ body {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+/*Start of header*/
 .header {
   display: flex;
   padding: 20px 10px;
@@ -22,6 +23,7 @@ body {
   padding: 10px;
   text-align: right;
 }
+
 /* End of header */
 
 /* Start of Color Palette */
@@ -42,7 +44,6 @@ body {
 .color {
   width: 80px;
   height: 80px;
-  border-radius: 50%;
   border: 2px solid #fff;
 }
 

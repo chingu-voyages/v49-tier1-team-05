@@ -3,6 +3,12 @@
   padding: 0;
 }
 
+.pointer-color-wheel {
+  border: 2px solid white;
+  width: 5px;
+  height: 5px;
+}
+
 #app {
   border: 1px solid black;
 }
@@ -74,7 +80,7 @@ body {
 
 .pickedColor {
   border: 2px solid black;
-  width: 30px;
+  width: 10%;
   height: 30px;
 }
 
@@ -101,4 +107,8 @@ body {
   position: relative;
   top: -2px;
   left: -1px;
+}
+
+#other-color-values {
+  margin: 10px;
 }

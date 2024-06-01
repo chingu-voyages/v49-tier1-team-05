@@ -66,8 +66,5 @@ colors.forEach(color => {
     colorPalette.appendChild(colorBox);
 });
 
-
-
-
 //Color Palette End
 

@@ -47,3 +47,27 @@ colorWheel.addEventListener("click", (event) => {
   lighteningBar.style.backgroundColor = currentColor;
   lighteningBar.style.backgroundImage = `linear-gradient(90deg, )`;
 });
+
+
+//Color Palette Start
+// Define colors
+const colors = ['#FF5733', '#33FF57', '#5733FF', '#FF5733', '#FF57BF', '#57FFBF', '#57FF33', '#FFC300', '#BFFFC3', '#33BFFC'];
+
+// Create color boxes
+const colorPalette = document.getElementById('colorPalette');
+
+colors.forEach(color => {
+    const colorBox = document.createElement('div');
+    colorBox.classList.add('colorBox');
+    colorBox.style.backgroundColor = color;
+    colorBox.addEventListener('click', () => {
+        alert('You picked color: ' + color);
+    });
+    colorPalette.appendChild(colorBox);
+});
+
+
+
+
+//Color Palette End
+

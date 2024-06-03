@@ -7,6 +7,14 @@ let lightening = 50;
 let rgb = [0, 0, 0];
 // hex value
 let hex = "";
+let vibe = "professional";
+const handleFormSubmit = (event) => {
+  event.preventDefault();
+  const formData = new FormData(event.target);
+  console.log(formData.get("mood"));
+};
+const form = document.getElementById("askAIForm");
+form.addEventListener("submit", handleFormSubmit);
 
 let saturationBar = document.querySelector(".saturation");
 let lighteningBar = document.querySelector(".lightening");
@@ -127,3 +135,25 @@ const hslToRgb = (h, s, l) => {
     l - a * Math.max(-1, Math.min(k(n) - 3, Math.min(9 - k(n), 1)));
   return [255 * f(0), 255 * f(8), 255 * f(4)];
 };
+
+import Groq from "groq-sdk";
+
+const groq = new Groq({
+  apiKey: import.meta.env.VITE_GROQ,
+  dangerouslyAllowBrowser: true,
+});
+
+// todo - replace with actual mood from a form
+let mood = "sunny";
+const chatCompletion = await groq.chat.completions.create({
+  messages: [
+    {
+      role: "user",
+      content: `Provide a JSON Object that contains a color scheme of four colors generated from the hex code color ${hex}. The color scheme should help with ${mood}. Provide details about why each color was picked. Ensure each color has a name and hex code and description with at least 10 characters. The JSON object is an array of objects that contain the following properties: name, hex, description.`,
+    },
+  ],
+  model: "llama3-8b-8192",
+});
+const chatResponse = chatCompletion.choices[0]?.message?.content || "";
+
+console.log(chatResponse);

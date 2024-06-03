@@ -34,13 +34,14 @@
       </header>
       <main id="container">
         <section class="content">
-          <p>Welcome, Here you'll find a color palette for your space.</p>
-          <p>You can click anywhere on the color wheel</p>
-          <p>You can also move the slider in saturation bar for now</p>
-          <p>
-            <b>Will update soon: </b> Get the saturation value + lightening
-            value to update the small picked color box with correct hsl value
-          </p>
+          <form id="askAIForm">
+            <label for="mood"
+              >What kind of atmosphere do you want to create with your website's
+              color scheme?</label
+            >
+            <input type="text" placeholder="Input the vibe" name="mood" />
+            <button type="submit">Ask AI</button>
+          </form>
         </section>
         <section class="color-picker">
           <div class="color-wheel" id="colorWheel"></div>

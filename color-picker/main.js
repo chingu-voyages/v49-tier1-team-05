@@ -1,6 +1,62 @@
 let colorWheel = document.getElementById("colorWheel");
 const rect = colorWheel.getBoundingClientRect();
+// dropdown menu and monochrome
+let selectedOption;
+let boxOne = document.getElementById("one");
+let boxTwo = document.getElementById("two");
+let boxThree = document.getElementById("three");
+let boxFour = document.getElementById("four");
+let boxFive = document.getElementById("five");
 
+let getButton = document.getElementById("categoryButton")
+getButton.onclick = getColorPalette;
+let baseColor = "#0000ff";
+function getColorPalette(){
+  selectedOption = document.getElementById("category").value;
+  console.log("selec", selectedOption)
+  if (selectedOption == "monochrome"){
+    let palette = generateMonochromaticPalette(baseColor, 5);  
+console.log("monochromecolors",palette);
+boxOne.style.backgroundColor = palette[0];
+boxTwo.style.backgroundColor = palette[1];
+boxThree.style.backgroundColor = palette[2];
+boxFour.style.backgroundColor = palette[3];
+boxFive.style.backgroundColor = palette[4];
+  }
+}
+
+// Function to convert hex to RGB
+function hexToRgb(hex) {
+  
+  hex = hex.replace(/^#/, '');
+  let bigint = parseInt(hex, 16);
+  let r = (bigint >> 16) & 255;
+  let g = (bigint >> 8) & 255;
+  let b = bigint & 255;
+  return { r, g, b };
+}
+
+// Function to convert RGB to hex
+function rgbToHex(r, g, b) {
+  return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1).toUpperCase();
+}
+
+// Function to generate a monochromatic palette
+function generateMonochromaticPalette(hex, numberOfShades) {
+  let { r, g, b } = hexToRgb(hex);
+  let palette = [];
+  for (let i = 0; i < numberOfShades; i++) {
+      let factor = i / (numberOfShades - 1);
+      let newR = Math.round(r * (1 - factor) + 255 * factor);
+      let newG = Math.round(g * (1 - factor) + 255 * factor);
+      let newB = Math.round(b * (1 - factor) + 255 * factor);
+      palette.push(rgbToHex(newR, newG, newB));
+  }
+  return palette;
+}
+
+
+// code for monochromatic ends here
 console.log(rect.width);
 let saturationBar = document.querySelector(".saturation");
 saturationBar.style.width = `${rect.width}px`;

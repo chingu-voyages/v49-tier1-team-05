@@ -25,6 +25,14 @@
       <main id="container">
         <section class="content">
           Welcome, Here you'll find a color palette for your space
+          <div id="color-palette">
+            <div class="color-box" id="one"></div>
+            <div class="color-box" id="two"></div>
+            <div class="color-box" id="three"></div>
+            <div class="color-box" id="four"></div>
+            <div class="color-box" id="five"></div>
+
+          </div>
         </section>
         <section class="color-picker">
           <div class="color-wheel" id="colorWheel"></div>
@@ -36,6 +44,17 @@
           </div>
           <p>lightening</p>
           <div class="lightening"></div>
+          <div class="dropdown">
+            <label for="category">Choose a Category</label>
+            <select name="category" id="category" class="category">
+                <option value="monochrome">Monochrome</option>
+                <option value="triad">Triad</option>
+                <option value="complementary">Complementary</option>
+                <!-- <option value="analogic">Analogic</option>
+                <option value="quad">Quad</option> -->
+            </select>
+            <button type="submit" class="categoryButton" id="categoryButton">Generate Color Palette</button>
+          </div>
         </section>
       </main>
       <footer class="footer">

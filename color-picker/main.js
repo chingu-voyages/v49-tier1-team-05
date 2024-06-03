@@ -50,21 +50,33 @@ colorWheel.addEventListener("click", (event) => {
 
 
 //Color Palette Start
-// Define colors
-const colors = ['#FF5733', '#33FF57', '#5733FF', '#FF5733', '#FF57BF', '#57FFBF', '#57FF33', '#FFC300', '#BFFFC3', '#33BFFC'];
 
-// Create color boxes
-const colorPalette = document.getElementById('colorPalette');
+// Function to generate a random color NEED to Conect to the Color Wheel 
+function generateRandomColor() {
+  return '#' + Math.floor(Math.random() * 16777215).toString(16);
+}
 
-colors.forEach(color => {
+// Function to generate the color palette
+function generateColorPalette() {
+  const colorPalette = document.getElementById('colorPalette');
+  colorPalette.innerHTML = '';
+
+  for (let i = 0; i < 5; i++) {
+    const color = generateRandomColor();
     const colorBox = document.createElement('div');
     colorBox.classList.add('colorBox');
     colorBox.style.backgroundColor = color;
-    colorBox.addEventListener('click', () => {
-        alert('You picked color: ' + color);
-    });
+    colorBox.setAttribute('title', color);
     colorPalette.appendChild(colorBox);
-});
+  }
+}
+
+// Generate the initial color palette
+generateColorPalette();
+
+// Regenerate the color palette when clicking on any color box
+document.getElementById('colorPalette').addEventListener('click', generateColorPalette);
+
 
 //Color Palette End
 

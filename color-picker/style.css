@@ -27,31 +27,23 @@ body {
 /* End of header */
 
 /* Start of Color Palette */
-.color-palette {
+#colorPalette {
   display: flex;
-  justify-content: center;
-  align-content: center;
-}
-
-h3 {
-  padding: 10px;
-  text-align: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
 .colorBox {
   width: 100px;
   height: 100px;
-  display: inline-block;
-  margin: 10px;
-  border: 2px solid #000;
+  border-radius: 5px;
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
-#colorPalette {
-  text-align: center;
+.colorBox:hover {
+  transform: scale(1.1);
 }
-
-
 
 /* End of Color Palette Container */
 

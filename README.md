@@ -41,5 +41,5 @@ coding!
 - Nandhini: [GitHub] (https://github.com/Nandhini0123) 
 - David: [GitHub](https://github.com/david-nyc-pm)
 - Mike Brindley: [GitHub](https://github.com/Mikelovin23) / [LinkedIn](https://www.linkedin.com/in/brindley/)
-- Rochelle: [GitHub](https://github.com/rybyrdsong) / [LinkedIn](https://linkedin.com/in/liaccountname)
+- Rochelle: [GitHub](https://github.com/rybyrdsong) / [LinkedIn](https://www.linkedin.com/in/rochelle-byrdsong)
 

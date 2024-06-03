@@ -6,11 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Color Harmonize</title>
     <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link />
-    <link rel="icon" type="image/x-icon" href="img/favicon-32x32.png" alt="img with the word color"/>
-    <link rel="stylesheet" href="./style.css"/>
-
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="img/favicon-32x32.png"
+      alt="img with the word color"
+    />
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <div id="app">
@@ -24,7 +34,13 @@
       </header>
       <main id="container">
         <section class="content">
-          Welcome, Here you'll find a color palette for your space
+          <p>Welcome, Here you'll find a color palette for your space.</p>
+          <p>You can click anywhere on the color wheel</p>
+          <p>You can also move the slider in saturation bar for now</p>
+          <p>
+            <b>Will update soon: </b> Get the saturation value + lightening
+            value to update the small picked color box with correct hsl value
+          </p>
           <div id="color-palette">
             <div class="color-box" id="one"></div>
             <div class="color-box" id="two"></div>
@@ -38,12 +54,19 @@
           <div class="color-wheel" id="colorWheel"></div>
           <p>picked color:</p>
           <div class="pickedColor" id="pickerColorDiv"></div>
-          <p>saturation:</p>
+          <p id="saturation-text">saturation:</p>
           <div class="saturation">
-            <div class="slider"></div>
+            <div class="slider" id="saturation-slider"></div>
           </div>
-          <p>lightening</p>
-          <div class="lightening"></div>
+          <p id="lightening-text">lightening</p>
+          <div class="lightening">
+            <div class="slider" id="lightening-slider"></div>
+          </div>
+
+          <div id="other-color-values">
+            Please select hue, saturation and lightening first to get the hex
+            value
+          </div>
           <div class="dropdown">
             <label for="category">Choose a Category</label>
             <select name="category" id="category" class="category">
@@ -59,11 +82,21 @@
       </main>
       <footer class="footer">
         <div class="icons">
-        <a href="https://github.com/chingu-voyages/v49-tier1-team-05"><i class="fa-brands fa-github"></i></a>
-        <a href="https://github.com/chingu-voyages/v49-tier1-team-05"> <i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/chingu-voyages/v49-tier1-team-05"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a href="https://github.com/chingu-voyages/v49-tier1-team-05">
+            <i class="fa-brands fa-linkedin"></i
+          ></a>
         </div>
         <h3 class="legal-terms">Privacy Policy / Terms of Service</h3>
-        <p> Copyright © 2024, <a href="https://github.com/chingu-voyages/v49-tier1-team-05">chingu-voyages/v49-tier1-team-05.</a> All rights reserved.</p>
+        <p>
+          Copyright © 2024,
+          <a href="https://github.com/chingu-voyages/v49-tier1-team-05"
+            >chingu-voyages/v49-tier1-team-05.</a
+          >
+          All rights reserved.
+        </p>
       </footer>
     </div>
     <script type="module" src="/main.js"></script>

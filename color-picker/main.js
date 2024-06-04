@@ -60,21 +60,21 @@ function generateRandomColor() {
 function generateColorPalette() {
   const colorPalette = document.getElementById('colorPalette');
   colorPalette.innerHTML = '';
-
+//loop to generate 5 random colors
   for (let i = 0; i < 5; i++) {
-    const color = generateRandomColor();
-    const colorBox = document.createElement('div');
-    colorBox.classList.add('colorBox');
-    colorBox.style.backgroundColor = color;
-    colorBox.setAttribute('title', color);
-    colorPalette.appendChild(colorBox);
+    const color = generateRandomColor(); //function needs to generate a specific color palette not random
+    const colorBox = document.createElement('div'); //create a new div to hold the color and stores it in the colorBox variable
+    colorBox.classList.add('colorBox'); //add the colorBox class to the colorBox variable
+    colorBox.style.backgroundColor = color; //set the background color of the colorBox variable to the color variable
+    colorBox.setAttribute('title', color); //set the title attribute of the colorBox variable to the color variable
+    colorPalette.appendChild(colorBox); //append the colorBox variable to the colorPalette variable
   }
 }
 
 // Generate the initial color palette
 generateColorPalette();
 
-// Regenerate the color palette when clicking on any color box
+// Regenerate the color palette when clicking on any color box - also need to connect to the Color Wheel
 document.getElementById('colorPalette').addEventListener('click', generateColorPalette);
 
 

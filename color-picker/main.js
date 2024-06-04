@@ -51,7 +51,7 @@ colorWheel.addEventListener("click", (event) => {
 
 //Color Palette Start
 
-// Function to generate a random color NEED to Conect to the Color Wheel 
+// Function to generate a random color NEED to Conect to the Color Wheel to generate monochromatic colors and triad colors
 function generateRandomColor() {
   return '#' + Math.floor(Math.random() * 16777215).toString(16);
 }

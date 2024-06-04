@@ -3,24 +3,112 @@
   padding: 0;
 }
 
+.pointer-color-wheel {
+  border: 2px solid white;
+  width: 5px;
+  height: 5px;
+}
+
 #app {
   border: 1px solid black;
 }
 
+body {
+  margin: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
 .header {
   display: flex;
-  padding: 10px;
-  border: 2px solid red;
+  padding: 20px 10px;
   justify-content: space-between;
 }
 
-.logo {
+.title {
   padding: 10px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: right;
 }
 
 .aboutUs {
   padding: 10px;
   background-color: blueviolet;
   border: 2px solid black;
+}
+
+#container {
+  height: 100vh;
+  border: 2px solid rgb(44, 188, 24);
+  display: flex;
+}
+
+#container section {
+  border: 2px solid yellow;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#container .color-wheel {
+  margin: 10px;
+  border-radius: 50%;
+  width: 50%;
+  height: 50%;
+  padding: 10px;
+  border: 5px solid black;
+  box-shadow: 5px 5px 10px 15px rgb(175, 171, 171);
+}
+
+.footer {
+  border: 2px solid black;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.legal-terms {
+  font-size: medium;
+  font-weight: 100;
+  padding: 0.35rem;
+}
+.icons {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  column-gap: 0.5rem;
+}
+
+.pickedColor {
+  border: 2px solid black;
+  width: 10%;
+  height: 30px;
+}
+
+.saturation {
+  border: 2px solid black;
+  margin: 10px;
+  height: 35px;
+  border-radius: 10px;
+}
+
+.lightening {
+  border: 2px solid black;
+  height: 35px;
+  border-radius: 10px;
+}
+
+.slider {
+  z-index: 2;
+  width: 10px;
+  height: 35px;
+  border: 2px solid red;
+  border-radius: 30%;
+  background-color: rgba(255, 255, 0, 50%);
+  position: relative;
+  top: -2px;
+  left: -1px;
+}
+
+#other-color-values {
+  margin: 10px;
 }

@@ -4,16 +4,81 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Color Harmonize</title>
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="img/favicon-32x32.png"
+      alt="img with the word color"
+    />
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <div id="app">
       <header class="header">
-        <div class="logo">Color Picker</div>
-
-        <div class="aboutUs">About us</div>
+        <img src="img/color_logo.png" class="logo" alt="image of color wheel" />
+        <div class="title">
+          <h1>COLOR HARMONIZE</h1>
+          <br />
+          <h2>Takes you on a journey to perfect color pairing</h2>
+        </div>
       </header>
+      <main id="container">
+        <section class="content">
+          <p>Welcome, Here you'll find a color palette for your space.</p>
+          <p>You can click anywhere on the color wheel</p>
+          <p>You can also move the slider in saturation bar for now</p>
+          <p>
+            <b>Will update soon: </b> Get the saturation value + lightening
+            value to update the small picked color box with correct hsl value
+          </p>
+        </section>
+        <section class="color-picker">
+          <div class="color-wheel" id="colorWheel"></div>
+          <p>picked color:</p>
+          <div class="pickedColor" id="pickerColorDiv"></div>
+          <p id="saturation-text">saturation:</p>
+          <div class="saturation">
+            <div class="slider" id="saturation-slider"></div>
+          </div>
+          <p id="lightening-text">lightening</p>
+          <div class="lightening">
+            <div class="slider" id="lightening-slider"></div>
+          </div>
+
+          <div id="other-color-values">
+            Please select hue, saturation and lightening first to get the hex
+            value
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="icons">
+          <a href="https://github.com/chingu-voyages/v49-tier1-team-05"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a href="https://github.com/chingu-voyages/v49-tier1-team-05">
+            <i class="fa-brands fa-linkedin"></i
+          ></a>
+        </div>
+        <h3 class="legal-terms">Privacy Policy / Terms of Service</h3>
+        <p>
+          Copyright © 2024,
+          <a href="https://github.com/chingu-voyages/v49-tier1-team-05"
+            >chingu-voyages/v49-tier1-team-05.</a
+          >
+          All rights reserved.
+        </p>
+      </footer>
     </div>
     <script type="module" src="/main.js"></script>
   </body>

@@ -35,12 +35,38 @@
       <main id="container">
         <section class="content">
           <form id="askAIForm">
-            <label for="mood"
-              >What kind of atmosphere do you want to create with your website's
-              color scheme?</label
-            >
-            <input type="text" placeholder="Input the vibe" name="mood" />
-            <button type="submit">Ask AI</button>
+            <fieldset>
+              <legend>Ask AI Assistant</legend>
+              <label for="mood">Mood</label>
+              <input
+                type="text"
+                id="mood"
+                placeholder="Input the vibe"
+                name="mood"
+              />
+              <label for="audience">Audience</label>
+              <input
+                type="text"
+                id="audience"
+                placeholder="Input the audience"
+                name="audience"
+              />
+              <label for="usage">Usage</label>
+              <input
+                type="text"
+                id="usage"
+                placeholder="Input the usage"
+                name="usage"
+              />
+              <label for="keywords">Keywords</label>
+              <input
+                type="text"
+                id="keywords"
+                placeholder="Input the keywords"
+                name="keywords"
+              />
+              <button type="submit">Ask AI</button>
+            </fieldset>
           </form>
         </section>
         <section class="color-picker">

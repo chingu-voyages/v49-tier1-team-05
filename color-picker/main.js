@@ -1,3 +1,4 @@
+import { colorSchemeFinder } from "./groq";
 let colorWheel = document.getElementById("colorWheel");
 const rect = colorWheel.getBoundingClientRect();
 let hue;
@@ -7,6 +8,25 @@ let lightening = 50;
 let rgb = [0, 0, 0];
 // hex value
 let hex = "";
+// this is the array of colors that will be returned from the AI
+let colors = [];
+
+const handleFormSubmit = async (event) => {
+  event.preventDefault();
+  const formData = new FormData(event.target);
+  let mood = formData.get("mood");
+  let audience = formData.get("audience");
+  let usage = formData.get("usage");
+  let keywords = formData.get("keywords");
+  const string = await colorSchemeFinder(mood, audience, usage, keywords);
+  const jsonRegex = /({.*})/gs;
+  const match = jsonRegex.exec(string);
+  const json = match ? match[1] : "";
+  const colorSchemeJson = JSON.parse(json);
+  colors = colorSchemeJson.colorScheme.colors;
+};
+const form = document.getElementById("askAIForm");
+form.addEventListener("submit", handleFormSubmit);
 
 let saturationBar = document.querySelector(".saturation");
 let lighteningBar = document.querySelector(".lightening");

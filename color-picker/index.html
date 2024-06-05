@@ -34,13 +34,44 @@
       </header>
       <main id="container">
         <section class="content">
-          <p>Welcome, Here you'll find a color palette for your space.</p>
-          <p>You can click anywhere on the color wheel</p>
-          <p>You can also move the slider in saturation bar for now</p>
-          <p>
-            <b>Will update soon: </b> Get the saturation value + lightening
-            value to update the small picked color box with correct hsl value
-          </p>
+          <form id="askAIForm">
+            <fieldset>
+              <legend>Ask AI Assistant</legend>
+              <label for="mood">Mood</label>
+              <input
+                type="text"
+                id="mood"
+                placeholder="bright, mellow, etc."
+                name="mood"
+                value="bright"
+              />
+              <label for="audience">Audience</label>
+              <input
+                type="text"
+                id="audience"
+                placeholder="students, professionals, etc."
+                name="audience"
+                value="shoppers"
+              />
+              <label for="usage">Usage</label>
+              <input
+                type="text"
+                id="usage"
+                placeholder="ecommerce, social media, etc."
+                name="usage"
+                value="ecommerce"
+              />
+              <label for="keywords">Keywords</label>
+              <input
+                type="text"
+                id="keywords"
+                placeholder="automobile, delivery, etc."
+                name="keywords"
+                value="clothes, fashion, shopping"
+              />
+              <button type="submit">Ask AI</button>
+            </fieldset>
+          </form>
         </section>
         <section class="color-picker">
           <div class="color-wheel" id="colorWheel"></div>

@@ -10,7 +10,10 @@ let rgb = [0, 0, 0];
 let hex = "";
 // this is the array of colors that will be returned from the AI
 let colors = [];
-
+// new line
+function toGiveColorsFromAI(colors){
+console.log("insidefunc", colors)
+}
 const handleFormSubmit = async (event) => {
   event.preventDefault();
   const formData = new FormData(event.target);
@@ -19,11 +22,16 @@ const handleFormSubmit = async (event) => {
   let usage = formData.get("usage");
   let keywords = formData.get("keywords");
   const string = await colorSchemeFinder(mood, audience, usage, keywords);
+  // new line
+  string.replace(/json/gi, "")
   const jsonRegex = /({.*})/gs;
   const match = jsonRegex.exec(string);
   const json = match ? match[1] : "";
   const colorSchemeJson = JSON.parse(json);
+  
   colors = colorSchemeJson.colorScheme.colors;
+  // new line
+  toGiveColorsFromAI(colors)
 };
 const form = document.getElementById("askAIForm");
 form.addEventListener("submit", handleFormSubmit);

@@ -5,7 +5,7 @@ const groq = new Groq({
   dangerouslyAllowBrowser: true,
 });
 
-const colorSchemeFinder = async (mood, audience, usage, keywords) => {
+const colorSchemeFinder = async (mood, audience, usage, keywords, dropdown) => {
   const chatCompletion = await groq.chat.completions.create({
     messages: [
       {
@@ -17,7 +17,7 @@ const colorSchemeFinder = async (mood, audience, usage, keywords) => {
             "colors": ["string"]
           }
         }
-        Provide a json object that contains a color scheme of 5 colors given the mood ${mood},
+        Provide a json object that contains a ${dropdown} color scheme of 5 colors given the mood ${mood},
         the color scheme should be for the ${audience} for ${usage}.
         here are a few more keywords to describe the color scheme we are aiming for: ${keywords}
         Dont give commnents in the JSON object, provide them after the JSON object is completed.

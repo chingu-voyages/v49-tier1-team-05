@@ -6,6 +6,7 @@ const groq = new Groq({
 });
 
 const colorSchemeFinder = async (mood, audience, usage, keywords, dropdown) => {
+  console.log("dropdown", dropdown)
   const chatCompletion = await groq.chat.completions.create({
     messages: [
       {

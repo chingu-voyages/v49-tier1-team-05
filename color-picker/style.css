@@ -4,7 +4,7 @@
 }
 
 #app {
-  border: 1px solid black;
+ 
 }
 
 body {
@@ -17,6 +17,7 @@ body {
   display: flex;
   padding: 20px 10px;
   justify-content: space-between;
+  border-bottom: 5px solid black;
 }
 
 .title {
@@ -26,58 +27,20 @@ body {
 
 /* End of header */
 
-/* Start of Color Palette */
-.color-palette-container {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: top;
-  align-items: center;
-  background-color: white;
-}
-
-.color-palette-container h2{
-  font-size: 20px;
-  font-weight: 600;
-  margin: 0;
-  padding: 50px;;
-}
-
-#colorPalette {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.colorBox {
-  width: 75px;
-  height: 50px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.colorBox:hover {
-  transform: scale(1.1);
-}
-
-/* End of Color Palette Container */
-
 .aboutUs {
   padding: 10px;
   background-color: blueviolet;
-  border: 2px solid black;
+  /*border: 2px solid black;*/
 }
 
 #container {
   height: 100vh;
-  border: 2px solid rgb(44, 188, 24);
+  /*border: 2px solid rgb(44, 188, 24);*/
   display: flex;
 }
 
 #container section {
-  border: 2px solid yellow;
+  /*border: 2px solid yellow; */
   width: 50%;
   display: flex;
   flex-direction: column;

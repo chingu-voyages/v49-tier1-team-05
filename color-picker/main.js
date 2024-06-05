@@ -49,34 +49,3 @@ colorWheel.addEventListener("click", (event) => {
 });
 
 
-//Color Palette Start
-
-// Function to generate a random color NEED to Conect to the Color Wheel to generate monochromatic colors and triad colors
-function generateRandomColor() {
-  return '#' + Math.floor(Math.random() * 16777215).toString(16);
-}
-
-// Function to generate the color palette
-function generateColorPalette() {
-  const colorPalette = document.getElementById('colorPalette');
-  colorPalette.innerHTML = '';
-//loop to generate 5 random colors
-  for (let i = 0; i < 5; i++) {
-    const color = generateRandomColor(); //function needs to generate a specific color palette not random
-    const colorBox = document.createElement('div'); //create a new div to hold the color and stores it in the colorBox variable
-    colorBox.classList.add('colorBox'); //add the colorBox class to the colorBox variable
-    colorBox.style.backgroundColor = color; //set the background color of the colorBox variable to the color variable
-    colorBox.setAttribute('title', color); //set the title attribute of the colorBox variable to the color variable
-    colorPalette.appendChild(colorBox); //append the colorBox variable to the colorPalette variable
-  }
-}
-
-// Generate the initial color palette
-generateColorPalette();
-
-// Regenerate the color palette when clicking on any color box - also need to connect to the Color Wheel
-document.getElementById('colorPalette').addEventListener('click', generateColorPalette);
-
-
-//Color Palette End
-

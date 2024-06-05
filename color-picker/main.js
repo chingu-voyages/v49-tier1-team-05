@@ -8,8 +8,9 @@ let lightening = 50;
 let rgb = [0, 0, 0];
 // hex value
 let hex = "";
+// this is the array of colors that will be returned from the AI
+let colors = [];
 
-let vibe = "professional";
 const handleFormSubmit = async (event) => {
   event.preventDefault();
   const formData = new FormData(event.target);
@@ -17,7 +18,12 @@ const handleFormSubmit = async (event) => {
   let audience = formData.get("audience");
   let usage = formData.get("usage");
   let keywords = formData.get("keywords");
-  console.log(await colorSchemeFinder(mood, audience, usage, keywords));
+  const string = await colorSchemeFinder(mood, audience, usage, keywords);
+  const jsonRegex = /({.*})/gs;
+  const match = jsonRegex.exec(string);
+  const json = match ? match[1] : "";
+  const colorSchemeJson = JSON.parse(json);
+  colors = colorSchemeJson.colorScheme.colors;
 };
 const form = document.getElementById("askAIForm");
 form.addEventListener("submit", handleFormSubmit);

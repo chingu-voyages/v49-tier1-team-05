@@ -1,64 +1,41 @@
 import { colorSchemeFinder } from "./groq";
 let colorWheel = document.getElementById("colorWheel");
 const rect = colorWheel.getBoundingClientRect();
-// dropdown menu and monochrome
-let selectedOption;
-let boxOne = document.getElementById("one");
-let boxTwo = document.getElementById("two");
-let boxThree = document.getElementById("three");
-let boxFour = document.getElementById("four");
-let boxFive = document.getElementById("five");
-
-let getButton = document.getElementById("categoryButton")
-getButton.onclick = getColorPalette;
-let baseColor = "#0000ff";
-function getColorPalette(){
-  selectedOption = document.getElementById("category").value;
-  console.log("selec", selectedOption)
-  if (selectedOption == "monochrome"){
-    let palette = generateMonochromaticPalette(baseColor, 5);  
-console.log("monochromecolors",palette);
-boxOne.style.backgroundColor = palette[0];
-boxTwo.style.backgroundColor = palette[1];
-boxThree.style.backgroundColor = palette[2];
-boxFour.style.backgroundColor = palette[3];
-boxFive.style.backgroundColor = palette[4];
-  }
+let hue;
+let saturation;
+let lightening = 50;
+// this is the rgb value and hex values (will only be set after hsl value is set)
+let rgb = [0, 0, 0];
+// hex value
+let hex = "";
+// this is the array of colors that will be returned from the AI
+let colors = [];
+// new line
+function toGiveColorsFromAI(colors){
+console.log("insidefunc", colors)
 }
-
-// Function to convert hex to RGB
-function hexToRgb(hex) {
+const handleFormSubmit = async (event) => {
+  event.preventDefault();
+  const formData = new FormData(event.target);
+  let mood = formData.get("mood");
+  let audience = formData.get("audience");
+  let usage = formData.get("usage");
+  let keywords = formData.get("keywords");
+  const string = await colorSchemeFinder(mood, audience, usage, keywords);
+  // new line
+  string.replace(/json/gi, "")
+  const jsonRegex = /({.*})/gs;
+  const match = jsonRegex.exec(string);
+  const json = match ? match[1] : "";
+  const colorSchemeJson = JSON.parse(json);
   
-  hex = hex.replace(/^#/, '');
-  let bigint = parseInt(hex, 16);
-  let r = (bigint >> 16) & 255;
-  let g = (bigint >> 8) & 255;
-  let b = bigint & 255;
-  return { r, g, b };
-}
+  colors = colorSchemeJson.colorScheme.colors;
+  // new line
+  toGiveColorsFromAI(colors)
+};
+const form = document.getElementById("askAIForm");
+form.addEventListener("submit", handleFormSubmit);
 
-// Function to convert RGB to hex
-function rgbToHex(r, g, b) {
-  return '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1).toUpperCase();
-}
-
-// Function to generate a monochromatic palette
-function generateMonochromaticPalette(hex, numberOfShades) {
-  let { r, g, b } = hexToRgb(hex);
-  let palette = [];
-  for (let i = 0; i < numberOfShades; i++) {
-      let factor = i / (numberOfShades - 1);
-      let newR = Math.round(r * (1 - factor) + 255 * factor);
-      let newG = Math.round(g * (1 - factor) + 255 * factor);
-      let newB = Math.round(b * (1 - factor) + 255 * factor);
-      palette.push(rgbToHex(newR, newG, newB));
-  }
-  return palette;
-}
-
-
-// code for monochromatic ends here
-console.log(rect.width);
 let saturationBar = document.querySelector(".saturation");
 let lighteningBar = document.querySelector(".lightening");
 let slider = document.querySelector(".slider");

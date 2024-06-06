@@ -76,7 +76,13 @@
             </fieldset>
           </form>
         </section>
-        
+        <div id="color-palette">
+          <div class="color-box" id="one"></div>
+          <div class="color-box" id="two"></div>
+          <div class="color-box" id="three"></div>
+          <div class="color-box" id="four"></div>
+          <div class="color-box" id="five"></div>
+        </div>  
         <section class="color-picker">
           <div class="color-wheel" id="colorWheel"></div>
           <p>picked color:</p>
@@ -89,11 +95,23 @@
           <div class="lightening">
             <div class="slider" id="lightening-slider"></div>
           </div>
-
+          
           <div id="other-color-values">
             Please select hue, saturation and lightening first to get the hex
             value
           </div>
+          <div class="dropdown">
+            <label for="category">Choose a Category</label>
+            <select name="category" id="category" class="category">
+                <option value="monochrome">Monochrome</option>
+                <option value="triad">Triad</option>
+                <option value="complementary">Complementary</option>
+                <option value="analogic">Analogic</option>
+                <option value="quad">Quad</option>
+            </select>
+            <!-- <button type="submit" class="categoryButton" id="categoryButton">Generate Color Palette</button> -->
+          </div>
+
         </section>
       </main>
       <!-- End of Main Section -->

@@ -36,10 +36,8 @@ coding!
 
 
 - Jody: [GitHub](https://github.com/JoDepp) / [LinkedIn](https://www.linkedin.com/in/jody-depp-develops/)
-- Secelia: [GitHub](https://github.com/Secelia02) / [LinkedIn](https://linkedin.com/in/seceliamcnair)
 - Radhika: [goldilocks0164](https://github.com/goldilocks0164) / [LinkedIn](https://www.linkedin.com/in/radhika-godla-81335166)
 - Nandhini: [GitHub](https://github.com/Nandhini0123) 
-- David: [GitHub](https://github.com/david-nyc-pm)
 - Mike Brindley: [GitHub](https://github.com/Mikelovin23) / [LinkedIn](https://www.linkedin.com/in/brindley/)
 - Rochelle: [GitHub](https://github.com/rybyrdsong) / [LinkedIn](https://www.linkedin.com/in/rochelle-byrdsong)
 

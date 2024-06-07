@@ -29,4 +29,3 @@ colorWheel.on("color:change", (newColor) => {
   document.getElementById("pickerColorDiv").style.backgroundColor = color;
 });
 document.getElementById("pickerColorDiv").style.backgroundColor = color;
-export { color };

@@ -1,8 +1,8 @@
 import iro from "@jaames/iro";
-
+let color = "rgb(255, 0, 0)";
 const colorWheel = new iro.ColorPicker("#colorWheel", {
   width: 320,
-  color: "rgb(255, 0, 0)",
+  color: color,
   borderWidth: 1,
   borderColor: "#fff",
   layoutDirection: "vertical",
@@ -24,10 +24,9 @@ const colorWheel = new iro.ColorPicker("#colorWheel", {
   ],
 });
 
-colorWheel.on("color:change", (color) => {
-  const hexColor = color.hexString;
-  document.getElementById("pickerColorDiv").style.backgroundColor = hexColor;
-  //   toGiveColorsFromAI();
+colorWheel.on("color:change", (newColor) => {
+  color = newColor.hexString;
+  document.getElementById("pickerColorDiv").style.backgroundColor = color;
 });
-
-export default colorWheel;
+document.getElementById("pickerColorDiv").style.backgroundColor = color;
+export { color };

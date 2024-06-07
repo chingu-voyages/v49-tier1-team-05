@@ -1,14 +1,11 @@
 import { colorSchemeFinder } from "./groq";
-import "./color-wheel";
+import { color } from "./color-wheel";
 // this is the rgb value and hex values (will only be set after hsl value is set)
 let rgb = [0, 0, 0];
 // hex value
 let hex = "";
 // this is the array of colors that will be returned from the AI
 let colors = [];
-
-// let getButton = document.getElementById("categoryButton")
-// getButton.onclick = getColorPalette;
 
 // new line
 const rgbStrToHex = (rgb) =>
@@ -17,6 +14,7 @@ const rgbStrToHex = (rgb) =>
     .match(/\d+/g)
     .map((x) => ("0" + parseInt(x).toString(16)).slice(-2))
     .join("");
+
 function toGiveColorsFromAI(palette) {
   const selectedOption = document.getElementById("category").value;
 

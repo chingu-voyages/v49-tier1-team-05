@@ -21,9 +21,12 @@
       alt="img with the word color"
     />
     <link rel="stylesheet" href="./style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Borel&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Borel&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="app">
@@ -31,8 +34,26 @@
       <header class="header">
         <img src="img/color_logo.png" class="logo" alt="image of color wheel" />
         <div class="title">
-          <div class="rainbow-text" style="text-align: center;">
-            <span class="block-line"><span><span style="color:#9400D3;">C</span><span style="color:#4B0082;">O</span><span style="color:#0000FF;">L</span><span style="color:#00FF00;">O</span><span style="color:#FFFF00;">R&nbsp;</span></span><span><span style="color:#FF7F00;">H</span><span style="color:#FF0000;">A</span><span style="color:#FF7F00;">R</span><span style="color:#FFFF00;">M</span><span style="color:#00FF00;">O</span><span style="color:#0000FF;">N</span><span style="color:#4B0082;">I</span><span style="color:#9400D3;">Z</span><span style="color:#4B0082;">E</span></span></span>
+          <div class="rainbow-text" style="text-align: center">
+            <span class="block-line"
+              ><span
+                ><span style="color: #9400d3">C</span
+                ><span style="color: #4b0082">O</span
+                ><span style="color: #0000ff">L</span
+                ><span style="color: #00ff00">O</span
+                ><span style="color: #ffff00">R&nbsp;</span></span
+              ><span
+                ><span style="color: #ff7f00">H</span
+                ><span style="color: #ff0000">A</span
+                ><span style="color: #ff7f00">R</span
+                ><span style="color: #ffff00">M</span
+                ><span style="color: #00ff00">O</span
+                ><span style="color: #0000ff">N</span
+                ><span style="color: #4b0082">I</span
+                ><span style="color: #9400d3">Z</span
+                ><span style="color: #4b0082">E</span></span
+              ></span
+            >
           </div>
           <br />
           <h2>journey through color</h2>
@@ -41,7 +62,9 @@
 
       <main id="container">
         <section class="content">
-          <p class="palette-intro">create a <span>color palette</span> for all your needs</p>
+          <p class="palette-intro">
+            create a <span>color palette</span> for all your needs
+          </p>
           <form id="askAIForm">
             <fieldset>
               <legend>Ask AI Assistant</legend>
@@ -87,36 +110,23 @@
           <div class="color-box" id="three"></div>
           <div class="color-box" id="four"></div>
           <div class="color-box" id="five"></div>
-        </div>  
+        </div>
         <section class="color-picker">
-          <div class="color-wheel" id="colorWheel"></div>
+          <div id="colorWheel"></div>
           <p>picked color:</p>
           <div class="pickedColor" id="pickerColorDiv"></div>
-          <p id="saturation-text">saturation:</p>
-          <div class="saturation">
-            <div class="slider" id="saturation-slider"></div>
-          </div>
-          <p id="lightening-text">lightening</p>
-          <div class="lightening">
-            <div class="slider" id="lightening-slider"></div>
-          </div>
-          
-          <div id="other-color-values">
-            Please select hue, saturation and lightening first to get the hex
-            value
-          </div>
+
           <div class="dropdown">
             <label for="category">Choose a Category</label>
             <select name="category" id="category" class="category">
-                <option value="monochrome">Monochrome</option>
-                <option value="triad">Triad</option>
-                <option value="complementary">Complementary</option>
-                <option value="analogic">Analogic</option>
-                <option value="quad">Quad</option>
+              <option value="monochrome">Monochrome</option>
+              <option value="triad">Triad</option>
+              <option value="complementary">Complementary</option>
+              <option value="analogic">Analogic</option>
+              <option value="quad">Quad</option>
             </select>
             <!-- <button type="submit" class="categoryButton" id="categoryButton">Generate Color Palette</button> -->
           </div>
-
         </section>
       </main>
       <!-- End of Main Section -->

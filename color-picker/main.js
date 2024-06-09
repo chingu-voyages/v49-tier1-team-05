@@ -9,7 +9,6 @@ let hex = "";
 let colors = [];
 
 // new line
-
 const handleFormSubmit = async (event) => {
   event.preventDefault();
   const formData = new FormData(event.target);

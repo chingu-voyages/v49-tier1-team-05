@@ -27,5 +27,6 @@ const colorWheel = new iro.ColorPicker("#colorWheel", {
 colorWheel.on("color:change", (newColor) => {
   color = newColor.hexString;
   document.getElementById("pickerColorDiv").style.backgroundColor = color;
+  document.getElementById("hex-color-value").innerText = color;
 });
 document.getElementById("pickerColorDiv").style.backgroundColor = color;

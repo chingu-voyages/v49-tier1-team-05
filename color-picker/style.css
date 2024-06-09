@@ -25,6 +25,10 @@ body {
   justify-content: space-between;
   border-bottom: 2px solid black;
 }
+img {
+  width:150px ;
+  height: 150px;
+}
 
 .title {
   padding: 10px;
@@ -200,11 +204,17 @@ form > fieldset {
   justify-content: center;
   column-gap: 0.5rem;
 }
-/* -------Small Screens--------------------------------*/
+/* -------Mobile Screens--------------------------------*/
 @media (max-width: 768px) {
   #container {
    flex-direction: column;
   }
+
+  .title {
+    text-align: center;
+    padding: 10px;
+  }
+  
   .palette-intro {
     font-size: 20px;
     padding: 5px;

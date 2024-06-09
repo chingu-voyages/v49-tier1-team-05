@@ -61,6 +61,24 @@
       </header>
 
       <main id="container">
+        <section class="color-picker">
+          <div id="colorWheel"></div>
+          <p>picked color:</p>
+          <div class="pickedColor" id="pickerColorDiv"></div>
+
+          <div class="dropdown">
+            <label for="category">Choose a Category</label>
+            <select name="category" id="category" class="category">
+              <option value="monochrome">Monochrome</option>
+              <option value="triad">Triad</option>
+              <option value="complementary">Complementary</option>
+              <option value="analogic">Analogic</option>
+              <option value="quad">Quad</option>
+            </select>
+            <!-- <button type="submit" class="categoryButton" id="categoryButton">Generate Color Palette</button> -->
+          </div>
+        </section>
+
         <section class="content">
           <p class="palette-intro">
             create a <span>color palette</span> for all your needs
@@ -103,31 +121,14 @@
               <button type="submit">Ask AI</button>
             </fieldset>
           </form>
-        </section>
-        <div id="color-palette">
-          <div class="color-box" id="one"></div>
-          <div class="color-box" id="two"></div>
-          <div class="color-box" id="three"></div>
-          <div class="color-box" id="four"></div>
-          <div class="color-box" id="five"></div>
-        </div>
-        <section class="color-picker">
-          <div id="colorWheel"></div>
-          <p>picked color:</p>
-          <div class="pickedColor" id="pickerColorDiv"></div>
-
-          <div class="dropdown">
-            <label for="category">Choose a Category</label>
-            <select name="category" id="category" class="category">
-              <option value="monochrome">Monochrome</option>
-              <option value="triad">Triad</option>
-              <option value="complementary">Complementary</option>
-              <option value="analogic">Analogic</option>
-              <option value="quad">Quad</option>
-            </select>
-            <!-- <button type="submit" class="categoryButton" id="categoryButton">Generate Color Palette</button> -->
+          <div id="color-palette">
+            <div class="color-box" id="one"></div>
+            <div class="color-box" id="two"></div>
+            <div class="color-box" id="three"></div>
+            <div class="color-box" id="four"></div>
+            <div class="color-box" id="five"></div>
           </div>
-        </section>
+        </section>    
       </main>
       <!-- End of Main Section -->
 

@@ -74,8 +74,7 @@ function generateColorPalette(palette){
     let parsedColor = parseRGB(colorComp)
     let complementary = rgbStrToHex(complementaryColor(parsedColor))
     let originalColor = rgbStrToHex(colorComp)
-    palette = [originalColor, complementary, "#ffffff", "#ffffff", "#ffffff"]
-    console.log(complementary, "complemen", originalColor)
+    palette = [originalColor, originalColor, complementary,complementary, "#ffffff"]
   }
   displayPalette(palette);
 

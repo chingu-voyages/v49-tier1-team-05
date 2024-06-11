@@ -24,32 +24,36 @@ body {
 /*Start of header*/
 .header {
   display: flex;
-  padding: 20px 10px;
+  height: 97px;
   justify-content: space-between;
   border-bottom: 2px solid black;
+  background-color: black;
 }
 img {
-  width: 150px;
-  height: 150px;
+  width: 60px;
+  height: 60px;
+  padding-left: 10px;
 }
 
-.title {
-  padding: 10px;
-  text-align: right;
+.header-content {
+display: flex;
+align-items: center;
+
 }
 
 .rainbow-text {
   font-family: Arial Black, Gadget, sans-serif;
   font-weight: bold;
-  font-size: 40px;
+  font-size: 60px;
   text-shadow: #a3a3a3 1px 1px 0px;
+  padding-left: 10px;
 }
 .rainbow-text .block-line > span {
   display: inline-block;
 }
 
 h2 {
-  font-family: "Borel", cursive;
+  font-family: "Island Moments", cursive;
   font-weight: 400;
   font-style: normal;
 }
@@ -207,14 +211,15 @@ form > fieldset {
   column-gap: 0.5rem;
 }
 /* -------Mobile Screens--------------------------------*/
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   #container {
     flex-direction: column;
   }
 
-  .title {
+  .rainbow-text {
     text-align: center;
     padding: 10px;
+    font-size: 30px;
   }
 
   .palette-intro {

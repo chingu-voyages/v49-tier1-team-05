@@ -9,4 +9,4 @@ Version	Supported
 0.1.0	✅
 < 1.0	❌
 Reporting a Vulnerability
-Please email mnix.dev@gmail.com
+

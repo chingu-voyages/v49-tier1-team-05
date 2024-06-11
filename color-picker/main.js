@@ -1,6 +1,5 @@
 import { colorSchemeFinder } from "./groq";
 import "./color-wheel";
-import { toGiveColorsFromAI } from "./GenerateAIColors";
 // this is the rgb value and hex values (will only be set after hsl value is set)
 let rgb = [0, 0, 0];
 // hex value
@@ -24,14 +23,17 @@ const handleFormSubmit = async (event) => {
     keywords,
     dropdown
   );
+  console.log(string);
   string.replace(/json/gi, "");
   const jsonRegex = /({.*})/gs;
   const match = jsonRegex.exec(string);
   const json = match ? match[1] : "";
+  console.log(json);
   const colorSchemeJson = JSON.parse(json);
 
   colors = colorSchemeJson.colorScheme.colors;
-  toGiveColorsFromAI(colors);
+  // toGiveColorsFromAI(colors);
+  displayPalette(colors);
 };
 const form = document.getElementById("askAIForm");
 form.addEventListener("submit", handleFormSubmit);
@@ -47,12 +49,12 @@ const hslToRgb = (h, s, l) => {
 };
 
 // Generating colors through generate colors button
-const generateButton = document.getElementById("categoryButton")
+const generateButton = document.getElementById("categoryButton");
 generateButton.onclick = generateColorPalette;
-function generateColorPalette(palette){
+function generateColorPalette(palette) {
   const rgbToHex = (r, g, b) =>
     ((r << 16) + (g << 8) + b).toString(16).padStart(6, "0");
-  
+
   const rgbStrToHex = (rgb) =>
     "#" +
     rgb
@@ -68,13 +70,19 @@ function generateColorPalette(palette){
     // const extractRgb = (str) => [str.replace(/rgb|\(|\)/g, "")];
     const pickColor = rgbStrToHex(color);
     palette = generateMonochromaticPalette(pickColor, 5);
-  }
-  else if (selectedOption == "complementary"){
-    const colorComp =document.getElementById("pickerColorDiv").style.backgroundColor
-    let parsedColor = parseRGB(colorComp)
-    let complementary = rgbStrToHex(complementaryColor(parsedColor))
-    let originalColor = rgbStrToHex(colorComp)
-    palette = [originalColor, originalColor, complementary,complementary, "#ffffff"]
+  } else if (selectedOption == "complementary") {
+    const colorComp =
+      document.getElementById("pickerColorDiv").style.backgroundColor;
+    let parsedColor = parseRGB(colorComp);
+    let complementary = rgbStrToHex(complementaryColor(parsedColor));
+    let originalColor = rgbStrToHex(colorComp);
+    palette = [
+      originalColor,
+      originalColor,
+      complementary,
+      complementary,
+      "#ffffff",
+    ];
   }
   displayPalette(palette);
 
@@ -108,24 +116,25 @@ function generateColorPalette(palette){
   function complementaryColor(rgb) {
     let [r, g, b] = rgb;
     let compColor = [255 - r, 255 - g, 255 - b];
-    return `rgb(${compColor[0]}, ${compColor[1]}, ${compColor[2]})`
+    return `rgb(${compColor[0]}, ${compColor[1]}, ${compColor[2]})`;
   }
-  function displayPalette(palette) {
-    // dropdown menu and monochrome
-    let boxOne = document.getElementById("one");
-    let boxTwo = document.getElementById("two");
-    let boxThree = document.getElementById("three");
-    let boxFour = document.getElementById("four");
-    let boxFive = document.getElementById("five");
-    boxOne.style.backgroundColor = palette[0];
-    boxOne.innerHTML = palette[0];
-    boxTwo.style.backgroundColor = palette[1];
-    boxTwo.innerHTML = palette[1];
-    boxThree.style.backgroundColor = palette[2];
-    boxThree.innerHTML = palette[2];
-    boxFour.style.backgroundColor = palette[3];
-    boxFour.innerHTML = palette[3];
-    boxFive.style.backgroundColor = palette[4];
-    boxFive.innerHTML = palette[4];
-  }
+}
+
+function displayPalette(palette) {
+  // dropdown menu and monochrome
+  let boxOne = document.getElementById("one");
+  let boxTwo = document.getElementById("two");
+  let boxThree = document.getElementById("three");
+  let boxFour = document.getElementById("four");
+  let boxFive = document.getElementById("five");
+  boxOne.style.backgroundColor = palette[0];
+  boxOne.innerHTML = palette[0];
+  boxTwo.style.backgroundColor = palette[1];
+  boxTwo.innerHTML = palette[1];
+  boxThree.style.backgroundColor = palette[2];
+  boxThree.innerHTML = palette[2];
+  boxFour.style.backgroundColor = palette[3];
+  boxFour.innerHTML = palette[3];
+  boxFive.style.backgroundColor = palette[4];
+  boxFive.innerHTML = palette[4];
 }

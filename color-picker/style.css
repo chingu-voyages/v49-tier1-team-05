@@ -152,6 +152,7 @@ label {
 #color-palette {
   /* border: 2px solid rgb(202, 200, 200); */
   height: 60px;
+
   width: 300px;
   display: flex;
   flex-direction: row;
@@ -167,6 +168,7 @@ label {
 .color-box:hover {
   color: #333;
 }
+
 
 /* --------Start of palette container and form on right-------- */
 .content {
@@ -279,3 +281,4 @@ form > fieldset {
     margin: 0 auto;
   }
 }
+

@@ -151,9 +151,7 @@ label {
 }
 #color-palette {
   /* border: 2px solid rgb(202, 200, 200); */
-  height: 60px;
-
-  width: 300px;
+  height: 120px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -163,13 +161,11 @@ label {
 
 .color-box {
   /* border: 1px solid rgb(237, 246, 237); */
-  width: 60px;
+  width: 120px;
 }
 .color-box:hover {
   color: #333;
 }
-
-
 
 /* --------Start of palette container and form on right-------- */
 .content {
@@ -225,7 +221,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-  background-color: #3e8e41;
+  background-color: black;
 }
 
 form > fieldset {
@@ -273,6 +269,12 @@ form > fieldset {
     margin: auto;
   }
 
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .palette-intro {
     font-size: 20px;
     padding: 5px;
@@ -280,7 +282,16 @@ form > fieldset {
   }
 
   form {
-    margin: 0 auto;
+    margin: 0 auto; 
   }
-}
 
+ #color-palette .color-box {
+  height: 60px;
+  width: 60px;
+  }
+
+  #container section {
+    width: 100%;
+  }
+
+}

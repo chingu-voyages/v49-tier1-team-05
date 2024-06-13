@@ -67,6 +67,7 @@ span {
   flex-direction: column;
   align-items: center;
 }
+
 /* Start of Color Wheel container on left */
 
 .color-picker {
@@ -149,6 +150,7 @@ label {
   border-radius: 10px;
   padding: 5px;
 }
+
 #color-palette {
   /* border: 2px solid rgb(202, 200, 200); */
   height: 120px;
@@ -188,7 +190,6 @@ form {
   max-width: 600px;
   margin: 60px auto;
   padding: 20px;
-  background-color: ;
   border: 1px solid #ccc;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -217,15 +218,32 @@ button[type="submit"] {
   border-radius: 5px;
   cursor: pointer;
   font-size: 18px;
-  margin-top: 20px;
+  margin: 5px;
 }
+
+
+fieldset button {
+float:right;
+ }
 
 button[type="submit"]:hover {
   background-color: black;
 }
 
+
 form > fieldset {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+legend { 
+  text-align: center;
+  font-size: 2rem;
+}
+
+label { 
+  padding-left: 10px;
+  padding-right: 5px;
 }
 /* End of palette container */
 

@@ -153,9 +153,7 @@ label {
 
 #color-palette {
   /* border: 2px solid rgb(202, 200, 200); */
-  height: 60px;
-
-  width: 300px;
+  height: 120px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -165,7 +163,7 @@ label {
 
 .color-box {
   /* border: 1px solid rgb(237, 246, 237); */
-  width: 60px;
+  width: 120px;
 }
 .color-box:hover {
   color: #333;
@@ -223,9 +221,15 @@ button[type="submit"] {
   margin: 5px;
 }
 
+
 fieldset button {
 float:right;
  }
+
+button[type="submit"]:hover {
+  background-color: black;
+}
+
 
 form > fieldset {
   margin-bottom: 10px;
@@ -283,6 +287,12 @@ label {
     margin: auto;
   }
 
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .palette-intro {
     font-size: 20px;
     padding: 5px;
@@ -290,7 +300,16 @@ label {
   }
 
   form {
-    margin: 0 auto;
+    margin: 0 auto; 
   }
-}
 
+ #color-palette .color-box {
+  height: 60px;
+  width: 60px;
+  }
+
+  #container section {
+    width: 100%;
+  }
+
+}

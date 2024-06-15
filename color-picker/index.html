@@ -21,46 +21,110 @@
       alt="img with the word color"
     />
     <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Island+Moments&display=swap" rel="stylesheet">
   </head>
   <body>
     <div id="app">
+      <!-- Header and Nav -->
       <header class="header">
+        <div class="header-content">
         <img src="img/color_logo.png" class="logo" alt="image of color wheel" />
-        <div class="title">
-          <h1>COLOR HARMONIZE</h1>
-          <br />
-          <h2>Takes you on a journey to perfect color pairing</h2>
+          <div class="rainbow-text">
+            <span class="block-line"
+              ><span
+                ><span style="color: #9400d3">C</span
+                ><span style="color: #4b0082">O</span
+                ><span style="color: #0000ff">L</span
+                ><span style="color: #00ff00">O</span
+                ><span style="color: #ffff00">R</span
+                ></span>   <span
+                ><span style="color: #ff7f00">H</span
+                ><span style="color: #ff0000">A</span
+                ><span style="color: #ff7f00">R</span
+                ><span style="color: #ffff00">M</span
+                ><span style="color: #00ff00">O</span
+                ><span style="color: #0000ff">N</span
+                ><span style="color: #4b0082">I</span
+                ><span style="color: #9400d3">Z</span
+                ><span style="color: #4b0082">E</span></span
+              ></span>
+          </div>
         </div>
       </header>
+      <!-- container -->
       <main id="container">
-        <section class="content">
-          <p>Welcome, Here you'll find a color palette for your space.</p>
-          <p>You can click anywhere on the color wheel</p>
-          <p>You can also move the slider in saturation bar for now</p>
-          <p>
-            <b>Will update soon: </b> Get the saturation value + lightening
-            value to update the small picked color box with correct hsl value
-          </p>
-        </section>
+        <!-- left section color wheel -->
         <section class="color-picker">
-          <div class="color-wheel" id="colorWheel"></div>
+          <div id="colorWheel"></div>
           <p>picked color:</p>
           <div class="pickedColor" id="pickerColorDiv"></div>
-          <p id="saturation-text">saturation:</p>
-          <div class="saturation">
-            <div class="slider" id="saturation-slider"></div>
-          </div>
-          <p id="lightening-text">lightening</p>
-          <div class="lightening">
-            <div class="slider" id="lightening-slider"></div>
-          </div>
+          <p>Hex value: <span id="hex-color-value"> </span></p>
 
-          <div id="other-color-values">
-            Please select hue, saturation and lightening first to get the hex
-            value
+          <div class="dropdown">
+            <label for="category">Choose a Category</label>
+            <select name="category" id="category" class="category">
+              <option value="monochrome">Monochrome</option>
+              <option value="complementary">Complementary</option>
+            </select>
+            <button type="submit" class="categoryButton" id="categoryButton">Generate Color Palette</button>
+          </div>
+        </section>
+        <!-- right section color palette -->
+        <section class="content">
+          <p class="palette-intro">
+            create a <span>Color Palette</span> for all your needs
+          </p>
+          <form id="askAIForm">
+            <fieldset>
+              <legend>Ask AI Assistant</legend>
+              <label for="mood">Mood</label>
+              <input
+                type="text"
+                id="mood"
+                placeholder="bright, mellow, etc."
+                name="mood"
+                value="bright"
+              />
+              <!--<label for="audience">Audience</label>
+              <input
+                type="text"
+                id="audience"
+                placeholder="students, professionals, etc."
+                name="audience"
+                value="shoppers"
+              />
+              <label for="usage">Usage</label>
+              <input
+                type="text"
+                id="usage"
+                placeholder="ecommerce, social media, etc."
+                name="usage"
+                value="ecommerce"
+              /> -->
+              <label for="keywords">Keywords</label>
+              <input
+                type="text"
+                id="keywords"
+                placeholder="automobile, delivery, etc."
+                name="keywords"
+                value="clothes, fashion, shopping"
+              />
+              <button type="submit">Ask AI</button>
+            </fieldset>
+          </form>
+          <div id="color-palette">
+            <div class="color-box" id="one"></div>
+            <div class="color-box" id="two"></div>
+            <div class="color-box" id="three"></div>
+            <div class="color-box" id="four"></div>
+            <div class="color-box" id="five"></div>
           </div>
         </section>
       </main>
+      <!-- End of Main Section -->
+
       <footer class="footer">
         <div class="icons">
           <a href="https://github.com/chingu-voyages/v49-tier1-team-05"
